@@ -1,0 +1,5 @@
+{
+    "require": {
+        "phpjuice/opencf": "^2.2"
+    }
+}

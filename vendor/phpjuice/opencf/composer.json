@@ -1,0 +1,55 @@
+{
+    "name": "phpjuice/opencf",
+    "description": "PHP implementation of the (Weighted Slopeone,Cosine, Weighted Cosine) rating-based collaborative filtering schemes.",
+    "keywords": [
+        "recommendation",
+        "recommender",
+        "collaborative filtering",
+        "weighted slope one",
+        "collaborative filtering engine"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mohammed Elhaouari",
+            "email": "phpjuice@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/phpjuice/opencf/issues",
+        "source": "https://github.com/phpjuice/opencf"
+    },
+    "require": {
+        "php": "^7.4|^8.0|^8.1"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.10",
+        "pestphp/pest": "^1.23",
+        "friendsofphp/php-cs-fixer": "^3.34"
+    },
+    "autoload": {
+        "psr-4": {
+            "OpenCF\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "OpenCF\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest --colors=always",
+        "analyse": "vendor/bin/phpstan analyse --ansi --debug",
+        "php-cs-fixer": [
+            "php-cs-fixer fix src --rules=@PSR2",
+            "php-cs-fixer fix tests --rules=@PSR2"
+        ]
+    },
+    "minimum-stability": "stable",
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
